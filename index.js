@@ -1,12 +1,12 @@
 const authConfig = {
-  "siteName": "GoIndex", // 网站名称
+  "siteName": "Taylant", // 网站名称
   "version": "_4.28", // 程序版本。用户不要手动修改
   /*"client_id": "202264815644.apps.googleusercontent.com",
   "client_secret": "X4Z3ca8xfWDb1Voo-F9a7ZxJ",*/
   // 【注意】强烈推荐使用自己的 client_id 和 client_secret
-  "client_id": "",
-  "client_secret": "",
-  "refresh_token": "", // 授权 token
+  "client_id": "989803023493-ruofmf1touck3fvshj8tvet9vq95b3fm.apps.googleusercontent.com",
+  "client_secret": "1u8vhnJVDVSYyGEM-9H00mqz",
+  "refresh_token": "1//0eBx7E6xIi2UCCgYIARAAGA4SNwF-L9IrkEAXa3dwouqDzmC7Ya2fNsPVCSvOG986APHxm_Ibf3TRhAXmRSxHaasf94PjkCgcZjQ", // 授权 token
   /**
    * 设置要显示的多个云端硬盘；按格式添加多个
    * [id]: 可以是 团队盘id、子文件夹id、或者"root"（代表个人盘根目录）；
@@ -23,7 +23,8 @@ const authConfig = {
   "roots": [
     {
       id: "root",
-      name: "个人盘"
+      name: "The Way home",
+      pass: "siasong"
     },
     {
       id: "drive_id",
@@ -62,7 +63,7 @@ const authConfig = {
    * 如果在全局认证的基础上，仍需要给某些目录单独进行 .password 文件内的密码验证的话，将此选项设置为 true;
    * 【注意】如果开启了 .password 文件密码验证，每次列目录都会额外增加查询目录内 .password 文件是否存在的开销。
    */
-  "enable_password_file_verify": false
+  "enable_password_file_verify": true
 };
 
 /**
@@ -129,7 +130,7 @@ function html(current_drive_order = 0, model = {}) {
     window.current_drive_order = ${current_drive_order};
     window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   </script>
-  <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/yanzai/goindex@${authConfig.version}/themes/${uiConfig.theme}/app.js"></script>
+  <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/siasong/goindex-1@${authConfig.version}/themes/${uiConfig.theme}/app.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
 </head>
 <body>
